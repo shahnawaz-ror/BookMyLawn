@@ -1,0 +1,23 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Subdomain</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @subdomains.each do |subdomain| %>
+      <tr>
+        <td><%= subdomain.name %></td>
+        <td><%= subdomain.subdomain %></td>
+        <td><%= link_to 'Show', subdomain %></td>
+        <td><%= link_to "#{subdomain.subdomain}.example.dev", root_url(subdomain: subdomain.subdomain) %></td>
+        <td><%= link_to 'Edit', edit_subdomain_path(subdomain) %></td>
+        <td><%= link_to 'Destroy', subdomain, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
