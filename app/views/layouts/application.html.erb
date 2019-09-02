@@ -10,15 +10,15 @@
   </head>
 
   <body>
-    <% if current_user.present? %>
+   <!--  <#% if current_user.present? %>
   <li>
-  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
+  <#%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
   </li>
-<% else %>
+<#% else %>
   <li>
-  <%= link_to('Login', new_user_session_path)  %>  
+  <#%= link_to('Login', new_user_session_path)  %>  
   </li>
-<% end %>
+<#% end %> -->
     <%= yield %>
   </body>
 </html>
